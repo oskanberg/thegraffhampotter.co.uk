@@ -1289,41 +1289,25 @@ blockquote {
   padding: 1em 0 1em 2em; }
 
 /* Section/Article */
-section#main,
-article#main {
-  -webkit-box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5); }
-section.special,
-article.special {
-  text-align: center; }
+section,
+article {
+  text-align: justify; }
+  section#main,
+  article#main {
+    -webkit-box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px -10px 40px rgba(0, 0, 0, 0.5); }
+  section.special,
+  article.special {
+    text-align: center; }
 
 header.major {
   padding-bottom: 2em; }
 header.special {
   margin-bottom: 5em;
-  padding-top: 7em;
+  padding-top: 4em;
   position: relative;
   text-align: center; }
-  header.special:before, header.special:after {
-    border-bottom: solid 1.5px;
-    border-top: solid 1.5px;
-    content: '';
-    height: 7px;
-    opacity: 0.1;
-    position: absolute;
-    top: 1.75em;
-    width: 43%; }
-  header.special:before {
-    left: 0; }
-  header.special:after {
-    right: 0; }
-  header.special h2 {
-    margin-bottom: 0;
-    color: #FFF; }
-  header.special h2 + p {
-    margin-bottom: 0;
-    padding-top: 1.5em; }
   header.special .icon {
     cursor: default;
     height: 7em;
@@ -1335,6 +1319,19 @@ header.special {
     header.special .icon:before {
       font-size: 3.5em;
       opacity: 0.35; }
+header.lines:before {
+  border-bottom: solid 1.5px;
+  border-top: solid 1.5px;
+  content: '';
+  height: 7px;
+  opacity: 0.1;
+  position: absolute;
+  top: 1.75em;
+  width: 100%; }
+header.lines:before {
+  left: 0; }
+header.lines:after {
+  right: 0; }
 
 footer > :last-child {
   margin-bottom: 0; }
@@ -1760,7 +1757,7 @@ input[type="reset"],
       border: 0; }
     .dropotron > li:hover > a {
       background: #fff;
-      color: #fff; }
+      color: grey; }
     .dropotron > li:first-child {
       border-top: 0; }
 
@@ -2022,8 +2019,8 @@ body.index #main {
   header.special {
     margin-bottom: 4em;
     padding-top: 5em; }
-    header.special:before, header.special:after {
-      width: 40%; }
+    header.special:before {
+      width: 100%; }
     header.special h2 + p {
       padding-top: 1.25em; }
 
@@ -2255,8 +2252,8 @@ body.index #main {
       margin-bottom: 3em;
       padding-left: 1.5em;
       padding-right: 1.5em; }
-      header.special:before, header.special:after {
-        width: 38%; }
+      header.special:before {
+        width: 100%; }
       header.special .icon {
         font-size: 0.75em;
         top: 1.5em; }

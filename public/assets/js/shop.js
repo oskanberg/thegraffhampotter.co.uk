@@ -28,6 +28,10 @@ function loadItems(start, end) {
     });
 }
 
+function loadNListings(n) {
+    loadItems(numElements, numElements + n);
+}
+
 function getJSON(url, callback) {
     var xhr = new XMLHttpRequest();
     xhr.open('GET', url, true);
@@ -35,19 +39,8 @@ function getJSON(url, callback) {
     xhr.onload = function() {
         var status = xhr.status;
         if (status == 200) {
-            console.log(xhr.response);
             callback(xhr.response);
         }
     };
     xhr.send();
 }
-
-function loadMoreListings(num) {
-    loadItems(numElements, numElements + num);
-}
-
-document.addEventListener('DOMContentLoaded', function() {
-    listingSection = document.getElementById('autofill');
-    // load the first four items
-    loadItems(0, 4);
-}, false);

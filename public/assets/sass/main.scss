@@ -141,6 +141,7 @@ blockquote {
 
 section,
 article {
+    text-align: justify;
     &#main {
         @include box-shadow(0px,
         -10px,
@@ -161,34 +162,10 @@ header {
     }
     &.special {
         margin-bottom: 5em;
-        padding-top: 7em;
+        padding-top: 4em;
         position: relative;
-        text-align: center;
-        &:before,
-        &:after {
-            border-bottom: solid 1.5px;
-            border-top: solid 1.5px;
-            content: '';
-            height: 7px;
-            opacity: 0.1;
-            position: absolute;
-            top: 1.75em;
-            width: 43%;
-        }
-        &:before {
-            left: 0;
-        }
-        &:after {
-            right: 0;
-        }
-        h2 {
-            margin-bottom: 0;
-            color: #FFF;
-        }
-        h2 + p {
-            margin-bottom: 0;
-            padding-top: 1.5em;
-        }
+        text-align: center;        
+
         .icon {
             cursor: default;
             height: 7em;
@@ -201,6 +178,25 @@ header {
                 font-size: 3.5em;
                 opacity: 0.35;
             }
+        }
+    }
+    &.lines {
+        &:before,
+        {
+            border-bottom: solid 1.5px;
+            border-top: solid 1.5px;
+            content: '';
+            height: 7px;
+            opacity: 0.1;
+            position: absolute;
+            top: 1.75em;
+            width: 100%;
+        }
+        &:before {
+            left: 0;
+        }
+        &:after {
+            right: 0;
         }
     }
 }
@@ -731,7 +727,7 @@ input[type="reset"],
         &:hover {
             > a {
                 background: _palette(one, bg);
-                color: _palette(one, fg);
+                color: grey;
             }
         }
         &:first-child {
@@ -1071,9 +1067,8 @@ body.index #main {
         &.special {
             margin-bottom: 4em;
             padding-top: 5em;
-            &:before,
-            &:after {
-                width: 40%;
+            &:before {
+                width: 100%;
             }
             h2 + p {
                 padding-top: 1.25em;
@@ -1320,9 +1315,8 @@ body.index #main {
             margin-bottom: 3em;
             padding-left: 1.5em;
             padding-right: 1.5em;
-            &:before,
-            &:after {
-                width: 38%;
+            &:before {
+                width: 100%;
             }
             .icon {
                 font-size: 0.75em;

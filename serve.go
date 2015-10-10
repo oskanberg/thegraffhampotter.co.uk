@@ -23,6 +23,7 @@ func updateRecord() {
 	var err error
 
 	lastUpdate = time.Now()
+	// dev test: Lochbroompottery
 	listings, err = etsyCli.GetStoreListings("thegraffhampotter", 1000)
 	if err != nil {
 		return
