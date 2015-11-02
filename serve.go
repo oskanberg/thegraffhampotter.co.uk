@@ -37,7 +37,7 @@ func listingsHandler(w http.ResponseWriter, r *http.Request) {
 
 	if time.Since(lastUpdate).Minutes() > UPDATE_INTERVAL_MINUTES {
 		// update
-		updateRecord()
+		go updateRecord()
 	}
 
 	var start, end int
