@@ -3,7 +3,7 @@
 		line
 		{
 			stroke: rgba(255,255,255,0.5);
-			stroke-width: 2px;
+			stroke-width: 1px;
 		}
     ]]></style>
 	<line x1="0" y1="0" x2="500" y2="500" />
