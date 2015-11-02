@@ -117,52 +117,52 @@
 
     });
 
-    window.headerImages = [
-        'http://www.shirooni.com/International-Artist-Residency-Resources/2014/10/ceramics-green-slip-Plates-01.jpg',
-        'http://www.oldstablesstudio.co.uk/cms/oss-content/uploads/2015/06/home-slide-1.jpg'
-    ];
+    // window.headerImages = [
+    //     'http://www.shirooni.com/International-Artist-Residency-Resources/2014/10/ceramics-green-slip-Plates-01.jpg',
+    //     'http://www.oldstablesstudio.co.uk/cms/oss-content/uploads/2015/06/home-slide-1.jpg'
+    // ];
 
-    window.imgCount = -1;
+    // window.imgCount = -1;
 
-    function preloadImages(array) {
-        if (!preloadImages.list) {
-            preloadImages.list = [];
-        }
-        var list = preloadImages.list;
-        for (var i = 0; i < array.length; i++) {
-            var img = new Image();
-            img.onload = function() {
-                var index = list.indexOf(this);
-                if (index !== -1) {
-                    // remove image from the array once it's loaded
-                    // for memory consumption reasons
-                    list.splice(index, 1);
-                }
-            };
-            list.push(img);
-            img.src = array[i];
-        }
-    }
+    // function preloadImages(array) {
+    //     if (!preloadImages.list) {
+    //         preloadImages.list = [];
+    //     }
+    //     var list = preloadImages.list;
+    //     for (var i = 0; i < array.length; i++) {
+    //         var img = new Image();
+    //         img.onload = function() {
+    //             var index = list.indexOf(this);
+    //             if (index !== -1) {
+    //                 // remove image from the array once it's loaded
+    //                 // for memory consumption reasons
+    //                 list.splice(index, 1);
+    //             }
+    //         };
+    //         list.push(img);
+    //         img.src = array[i];
+    //     }
+    // }
 
 
-    function changeHeaderImage() {
-        window.imgCount = (window.imgCount + 1) % window.headerImages.length;
+    // function changeHeaderImage() {
+    //     window.imgCount = (window.imgCount + 1) % window.headerImages.length;
 
-        var bgImg = $('#banner').css('background-image');
-        if (bgImg === undefined) return;
-        var arr = bgImg.split(',');
+    //     var bgImg = $('#banner').css('background-image');
+    //     if (bgImg === undefined) return;
+    //     var arr = bgImg.split(',');
 
-        arr[1] = 'url("' + window.headerImages[window.imgCount] + '")';
+    //     arr[1] = 'url("' + window.headerImages[window.imgCount] + '")';
 
-        console.log(arr);
-        $('#banner').css('background-image', arr.join(','));
-        // $('#banner').css('background-image', 'none');
-    }
+    //     console.log(arr);
+    //     $('#banner').css('background-image', arr.join(','));
+    //     // $('#banner').css('background-image', 'none');
+    // }
 
-    // rotate header images
-    preloadImages(window.headerImages);
-    changeHeaderImage();
-    setInterval(changeHeaderImage, 3000);
+    // // rotate header images
+    // preloadImages(window.headerImages);
+    // changeHeaderImage();
+    // setInterval(changeHeaderImage, 3000);
 
 })(jQuery);
 

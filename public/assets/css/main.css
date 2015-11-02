@@ -1785,7 +1785,7 @@ input[type="reset"],
 #banner {
   background-attachment: scroll, fixed;
   background-color: #433132;
-  background-image: url("images/overlay.png"), url();
+  background-image: url("images/overlay.png"), url("../../images/01.jpg");
   background-position: top left, bottom center;
   background-repeat: repeat, no-repeat;
   background-size: auto, cover;
@@ -1862,7 +1862,7 @@ body.index #main {
 #cta {
   background-attachment: scroll, scroll, scroll, fixed;
   background-color: #645862;
-  background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("http://the189.com/wordpress/wp-content/uploads/2012/06/Ceramics-by-Keramiker-Karin-Michelsen-image6.jpg");
+  background-image: url("images/light-tl.svg"), url("images/light-tr.svg"), url("images/overlay.png"), url("../../images/02.jpg");
   background-position: top left, top right, top left, bottom center;
   background-repeat: no-repeat, no-repeat, repeat, no-repeat;
   background-size: 25em, 25em, auto, cover;
